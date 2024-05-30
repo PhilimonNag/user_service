@@ -35,23 +35,23 @@ go test -v
 Get user by ID:
 
 ```
-grpcurl -d '{"id": 1}' -plaintext localhost:50051 user.UserService/GetUserById
+grpcurl -d '{"id": 1}' -plaintext localhost:8000 user.UserService/GetUserById
 ```
 
 Get users by IDs:
 
 ```
-grpcurl -d '{"ids": [1, 2]}' -plaintext localhost:50051 user.UserService/GetUsersByIds
+grpcurl -d '{"ids": [1, 2]}' -plaintext localhost:8000 user.UserService/GetUsersByIds
 ```
 
 Search users by city:
 
 ```
-grpcurl -d '{"city": "LA"}' -plaintext localhost:50051 user.UserService/SearchUsers
+grpcurl -d '{"city": "LA"}' -plaintext localhost:8000 user.UserService/SearchUsers
 ```
 
 Create a new user:
 
 ```
-grpcurl -d '{"fname": "Alice", "city": "SF", "phone": 1122334455, "height": 5.7, "married": false}' -plaintext localhost:50051 user.UserService/CreateUser
+grpcurl -d '{"fname": "Alice", "city": "SF", "phone": 1122334455, "height": 5.7, "married": false}' -plaintext localhost:8000 user.UserService/CreateUser
 ```
