@@ -6,6 +6,7 @@ import (
 
 	pb "github.com/philimonnag/user_service/proto"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 type grpcServer struct {
@@ -22,6 +23,7 @@ func (s *grpcServer) Run() error {
 	}
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, &userServiceServer{})
+	reflection.Register(grpcServer)
 	log.Println("starting grpc on", s.addr)
 	return grpcServer.Serve(lis)
 }
