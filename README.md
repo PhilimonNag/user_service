@@ -7,7 +7,6 @@ This is a gRPC service for managing user details with search functionality.
 ### Prerequisites
 
 - Go 1.21.3
-- Docker
 
 ### Running Locally
 
